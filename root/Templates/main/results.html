@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+{% if response.status_code == 200 %}
+<h1>{{ url }} is running status {{ response.status_code }}</h1>
+<a href="#back"><button style="text-decoration:none;">Go down</button> </a>
+<p> <strong> RESPONSE: </strong> {{ text }}</p>
+{% endif %}
+{% elif response.status_code == 500 %}
+<h1>{{ url }}  is down status {{ response.status_code }}</h1>
+<a href="#back"><button style="text-decoration:none;">Go down</button> </a>
+<p><strong>RESPONSE:</strong> {{ text }}</p>
+{% endif %}
+</body>
+<footer id="back">
+    <a href="/status"><button style="text-decoration:none;">Back</button> </a>
+</footer>
+</html>

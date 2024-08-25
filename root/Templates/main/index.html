@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>is-up</title>
+</head>
+<body>
+<form action="/status/results/" method="post">
+    {% csrf_token %}
+    <input type="url" name="link" id="link" placeholder="Enter a url" required>
+    <button type="submit">Check</button>
+</form>
+<p><strong>Note:</strong>  If the url does not exist or is taking too much time to respond the (500) which means that the site is down  error you see is generated for our servers.
+Please enter an existing url for the best experience
+    <br>
+    <br>
+    <strong>Example: https://www.google.com</strong>
+</p>
+</body>
+</html>
